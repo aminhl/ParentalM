@@ -1,0 +1,924 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LoisirDevoir</class>
+ <widget class="QDialog" name="LoisirDevoir">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>799</width>
+    <height>513</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>761</width>
+     <height>481</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>1</number>
+   </property>
+   <widget class="QWidget" name="tab">
+    <attribute name="title">
+     <string>Devoir</string>
+    </attribute>
+    <widget class="QGroupBox" name="groupBox_4">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>351</width>
+       <height>351</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string/>
+     </property>
+     <widget class="QLabel" name="NumDevoir">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>30</y>
+        <width>111</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Numéro Devoir :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="DiffDevoir">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>100</y>
+        <width>171</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Difficulté Devoir :</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="StatutDev">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>160</y>
+        <width>121</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="StatutDevoir">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>160</y>
+        <width>131</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Statut Devoir :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="DateDevoir">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>280</y>
+        <width>81</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Date Devoir :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="TacheDevoir">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>220</y>
+        <width>101</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Tache Devoir :</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="TacheDev">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>220</y>
+        <width>121</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="NumeroDev">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>50</y>
+        <width>121</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="minimum">
+       <number>0</number>
+      </property>
+      <property name="maximum">
+       <number>9999</number>
+      </property>
+      <property name="value">
+       <number>0</number>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="DiffDev">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>100</y>
+        <width>121</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Facile</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Moyen</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Difficile</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QTextEdit" name="DateDev">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>280</y>
+        <width>131</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QLineEdit" name="leRecherche">
+     <property name="geometry">
+      <rect>
+       <x>600</x>
+       <y>10</y>
+       <width>111</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="placeholderText">
+      <string>recherche</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="buttonAjouterDevoir">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>370</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Ajouter</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="buttonSupprimerDevoir">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>370</y>
+       <width>71</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Supprimer</string>
+     </property>
+    </widget>
+    <widget class="QTableView" name="tabDevoir">
+     <property name="geometry">
+      <rect>
+       <x>370</x>
+       <y>50</y>
+       <width>341</width>
+       <height>301</height>
+      </rect>
+     </property>
+     <property name="selectionBehavior">
+      <enum>QAbstractItemView::SelectRows</enum>
+     </property>
+     <property name="sortingEnabled">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="buttonModifererDevoir">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>370</y>
+       <width>75</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Modifer</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="cbTriDevoir">
+     <property name="geometry">
+      <rect>
+       <x>480</x>
+       <y>10</y>
+       <width>111</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>Tous</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Numero Devoir</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Difficulté Devoir</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Statut Devoir</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Tache Devoir</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Date Devoir</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QPushButton" name="DevoirVideo">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>410</y>
+       <width>81</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Video</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_date_time">
+     <property name="geometry">
+      <rect>
+       <x>380</x>
+       <y>360</y>
+       <width>211</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>20</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="TradEngDev">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>410</y>
+       <width>95</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>English</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="TradFrDev">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>410</y>
+       <width>95</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>French</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="TradGerDev">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>410</y>
+       <width>95</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Deutsch</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="DvExl">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>370</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Excel</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="homeDev">
+     <property name="geometry">
+      <rect>
+       <x>640</x>
+       <y>360</y>
+       <width>111</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Home</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_2">
+    <attribute name="title">
+     <string>Loisir</string>
+    </attribute>
+    <widget class="QStackedWidget" name="stackedWidget_2">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>0</y>
+       <width>771</width>
+       <height>531</height>
+      </rect>
+     </property>
+     <property name="currentIndex">
+      <number>2</number>
+     </property>
+     <widget class="QWidget" name="afficherCarteFid">
+      <widget class="QTableView" name="tabCarteFid">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>80</y>
+         <width>741</width>
+         <height>361</height>
+        </rect>
+       </property>
+       <property name="selectionBehavior">
+        <enum>QAbstractItemView::SelectRows</enum>
+       </property>
+       <property name="sortingEnabled">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="le_recherche_carteFid">
+       <property name="geometry">
+        <rect>
+         <x>560</x>
+         <y>40</y>
+         <width>191</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="placeholderText">
+        <string>recherche</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="cb_colone_carteFid">
+       <property name="geometry">
+        <rect>
+         <x>360</x>
+         <y>40</y>
+         <width>191</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>Tous</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>NUM_CARTE</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>DATE_DE_CREATION</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>POINTS</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>TOTAL_ACHATS</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>STATUT</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>REMISE</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>MATRICULE_FISCALE</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QPushButton" name="button_ajouter_carteFid">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>470</y>
+         <width>131</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Ajouter</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="button_supprimer_carteFid">
+       <property name="geometry">
+        <rect>
+         <x>160</x>
+         <y>470</y>
+         <width>131</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Supprimer</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_4">
+       <property name="geometry">
+        <rect>
+         <x>620</x>
+         <y>470</y>
+         <width>131</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Retour</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="ajoutClient_2">
+      <widget class="QDialogButtonBox" name="validerAjout_cf">
+       <property name="geometry">
+        <rect>
+         <x>570</x>
+         <y>500</y>
+         <width>193</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="standardButtons">
+        <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="modifierClient_2">
+      <widget class="QDialogButtonBox" name="validerModif_cf">
+       <property name="geometry">
+        <rect>
+         <x>570</x>
+         <y>500</y>
+         <width>193</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="standardButtons">
+        <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="cbTriLoisir">
+       <property name="geometry">
+        <rect>
+         <x>450</x>
+         <y>20</y>
+         <width>111</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>Tous</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Numéro Loisir</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Type Loisir</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Date Loisir</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Lieu Loisir</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Duree Loisir</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_7">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>20</y>
+         <width>351</width>
+         <height>351</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string/>
+       </property>
+       <widget class="QLabel" name="NumLoisir">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>30</y>
+          <width>111</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Numéro Loisir :</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="TypeLoisir">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>100</y>
+          <width>171</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Type Loisir :</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="DateLois">
+        <property name="geometry">
+         <rect>
+          <x>160</x>
+          <y>160</y>
+          <width>121</width>
+          <height>21</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="DateLoisir">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>160</y>
+          <width>131</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Date Loisir :</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_46">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>300</y>
+          <width>55</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="DureeLoisir">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>280</y>
+          <width>91</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Duree Loisir  : </string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="LieuLoisir">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>220</y>
+          <width>111</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Lieu Loisir :</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="LieuLois">
+        <property name="geometry">
+         <rect>
+          <x>160</x>
+          <y>220</y>
+          <width>121</width>
+          <height>22</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="NumeroLois">
+        <property name="geometry">
+         <rect>
+          <x>160</x>
+          <y>50</y>
+          <width>121</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="minimum">
+         <number>0</number>
+        </property>
+        <property name="maximum">
+         <number>9999</number>
+        </property>
+        <property name="value">
+         <number>0</number>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="TypeLois">
+        <property name="geometry">
+         <rect>
+          <x>160</x>
+          <y>100</y>
+          <width>121</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <item>
+         <property name="text">
+          <string>Football</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Piscine</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Promenade</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Cinema</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Camping</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QTextEdit" name="DureeLois">
+        <property name="geometry">
+         <rect>
+          <x>160</x>
+          <y>280</y>
+          <width>131</width>
+          <height>31</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QPushButton" name="buttonModifererLoisir">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>380</y>
+         <width>75</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Modifer</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="buttonSupprimerLoisir">
+       <property name="geometry">
+        <rect>
+         <x>190</x>
+         <y>380</y>
+         <width>71</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Supprimer</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="leRechercheLoisir">
+       <property name="geometry">
+        <rect>
+         <x>570</x>
+         <y>20</y>
+         <width>111</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="placeholderText">
+        <string>recherche</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="buttonAjouterLoisir">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>380</y>
+         <width>81</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Ajouter</string>
+       </property>
+      </widget>
+      <widget class="QTableView" name="tabLoisir">
+       <property name="geometry">
+        <rect>
+         <x>360</x>
+         <y>60</y>
+         <width>341</width>
+         <height>301</height>
+        </rect>
+       </property>
+       <property name="selectionBehavior">
+        <enum>QAbstractItemView::SelectRows</enum>
+       </property>
+       <property name="sortingEnabled">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="PdfLoisir">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>420</y>
+         <width>81</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Pdf Loisir</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="ImprimerLoisir">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>420</y>
+         <width>71</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Imp</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="TradEngLois">
+       <property name="geometry">
+        <rect>
+         <x>190</x>
+         <y>425</y>
+         <width>95</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>English</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="TradFrLois">
+       <property name="geometry">
+        <rect>
+         <x>270</x>
+         <y>425</y>
+         <width>95</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Français</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="TradGerLois">
+       <property name="geometry">
+        <rect>
+         <x>350</x>
+         <y>425</y>
+         <width>95</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Deutsch</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="LoisXl">
+       <property name="geometry">
+        <rect>
+         <x>270</x>
+         <y>380</y>
+         <width>93</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Excel</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
