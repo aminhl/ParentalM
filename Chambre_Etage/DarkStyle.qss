@@ -1,0 +1,73 @@
+/ *
+################################################ ############################
+# #
+# La licence MIT #
+# #
+# Copyright (C) 2017 par Juergen Skrotzky (JorgenVikingGod@gmail.com) #
+# >> https://github.com/Jorgen-VikingGod #
+# #
+# Sources: https://github.com/Jorgen-VikingGod/Qt-Frameless-Window-DarkStyle #
+# #
+################################################ ############################
+* /
+
+# inclure  " DarkStyle.h "
+
+DarkStyle :: DarkStyle (): DarkStyle (styleBase ()) {}
+
+DarkStyle :: DarkStyle (style QStyle *): QProxyStyle (style) {}
+
+QStyle * DarkStyle :: styleBase (QStyle * style) const {
+  statique QStyle * base =
+      !style ? QStyleFactory :: create ( QStringLiteral ( " Fusion " )): style;
+  base de retour ;
+}
+
+QStyle * DarkStyle :: baseStyle () const { return  styleBase (); }
+
+void  DarkStyle :: polish (QPalette et palette) {
+  // modifie la palette en sombre
+  palette. setColor (QPalette :: Fenêtre, QColor ( 53 , 53 , 53 ));
+  palette. setColor (QPalette :: WindowText, Qt :: blanc);
+  palette. setColor (QPalette :: Désactivé, QPalette :: WindowText,
+                   QColor ( 127 , 127 , 127 ));
+  palette. setColor (QPalette :: Base, QColor ( 42 , 42 , 42 ));
+  palette. setColor (QPalette :: AlternateBase, QColor ( 66 , 66 , 66 ));
+  palette. setColor (QPalette :: ToolTipBase, Qt :: blanc);
+  palette. setColor (QPalette :: ToolTipText, QColor ( 53 , 53 , 53 ));
+  palette. setColor (QPalette :: Texte, Qt :: blanc);
+  palette. setColor (QPalette :: Disabled, QPalette :: Text, QColor ( 127 , 127 , 127 ));
+  palette. setColor (QPalette :: Dark, QColor ( 35 , 35 , 35 ));
+  palette. setColor (QPalette :: Ombre, QColor ( 20 , 20 , 20 ));
+  palette. setColor (QPalette :: Button , QColor ( 53 , 53 , 53 ));
+  palette. setColor (QPalette :: ButtonText, Qt :: white);
+  palette. setColor (QPalette :: Désactivé, QPalette :: ButtonText,
+                   QColor ( 127 , 127 , 127 ));
+  palette. setColor (QPalette :: BrightText, Qt :: rouge);
+  palette. setColor (QPalette :: Lien, QColor ( 42 , 130 , 218 ));
+  palette. setColor (QPalette :: Highlight, QColor ( 42 , 130 , 218 ));
+  palette. setColor (QPalette :: Désactivé, QPalette :: Highlight, QColor ( 80 , 80 , 80 ));
+  palette. setColor (QPalette :: HighlightedText, Qt :: white);
+  palette. setColor (QPalette :: Disabled, QPalette :: HighlightedText,
+                   QColor ( 127 , 127 , 127 ));
+}
+
+void  DarkStyle :: polish (application QApplication *) {
+  if (! app) return ;
+
+  // augmenter la taille de la police pour une meilleure lecture,
+  // setPointSize a été réduit de +2 car lorsqu'il est appliqué de cette façon dans Qt5, le
+  // la police est plus grande que prévu pour une raison quelconque
+  QFont defaultFont = QApplication :: font ();
+  police par défaut. setPointSize (defaultFont. pointSize () + 1 );
+  app-> setFont (defaultFont);
+
+  // loadstylesheet
+  QFile qfDarkstyle ( QStringLiteral ( " : /darkstyle/darkstyle.qss " ));
+  if (qfDarkstyle. open (QIODevice :: ReadOnly | QIODevice :: Text)) {
+    // définir la feuille de style
+    QString qsStylesheet = QString :: fromLatin1 (qfDarkstyle. ReadAll ());
+    app-> setStyleSheet (qsStylesheet);
+    qfDarkstyle. fermer ();
+  }
+}
